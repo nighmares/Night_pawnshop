@@ -51,10 +51,6 @@ AddEventHandler('spawn:pawnshop',function(coords,heading)
 	tunpc = CreatePed(5, hash, coords, heading, false, false)
 	FreezeEntityPosition(tunpc, true)
     SetBlockingOfNonTemporaryEvents(tunpc, true)
-	loadAnimDict("amb@world_human_cop_idles@male@idle_b") 
-	while not TaskPlayAnim(tunpc, "amb@world_human_cop_idles@male@idle_b", "idle_e", 8.0, 1.0, -1, 17, 0, 0, 0, 0) do
-	Wait(1000)
-	end
 end)
 
 RegisterNetEvent('Night:pawnshop', function()
