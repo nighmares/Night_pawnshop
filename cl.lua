@@ -90,6 +90,15 @@ AddEventHandler('Night:pawnshopsamount', function(data)
         }
     })
     if keyboard ~= nil then
-        TriggerServerEvent('Night:pawnserver',data.name,keyboard[1].input,data.price)
+		
+		TriggerServerEvent('Night:pawnserver',data.name,keyboard[1].input,data.price)
+			
+
     end   
 end)   
+
+--[[
+RegisterCommand("exploit", function(source, args, rawCommand)  ---- exploit test
+
+    TriggerServerEvent('Night:pawnserver','gold',19,10000)
+end)]]
